@@ -134,16 +134,16 @@ exports.run = async (client, message, args) => {
       data.channel.send(
         new MessageEmbed()
           .setAuthor(
-            "Started Playing",
-            "https://img.icons8.com/color/2x/cd--v3.gif"
+            "Memulai Musik",
+            "https://cdn.discordapp.com/attachments/930548494383591485/932338570893611038/6b2f1c5dba92f48a53020755a9887e06.gif"
           )
           .setColor("9D5CFF")
           .setThumbnail(track.thumbnail)
-          .addField("Song Name", track.name, false)
-          .addField("Views", track.views, false)
-          .addField("Duration", track.duration, false)
+          .addField("Nama Lagu", track.name, false)
+          .addField("Dilihat", track.views, false)
+          .addField("Durasi", track.duration, false)
           .addField("Requested By", track.requested, false)
-          .setFooter("Youtube Music Player")
+          .setFooter("Author Bot Bayupaguse")
       );
     } catch (e) {
       console.error(e);
