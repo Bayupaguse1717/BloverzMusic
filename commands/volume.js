@@ -14,13 +14,13 @@ exports.run = async (client, message, args) => {
       new MessageEmbed()
         .setAuthor(
           "Master Volume Controller",
-          "https://img.icons8.com/color/2x/high-volume--v2.gif"
+          "https://cdn.discordapp.com/attachments/930548494383591485/932339097685610567/volume-turn-up-the-volume.gif"
         )
         .setColor("BLUE")
         .setDescription("**Current volume is " + queue.volume + " **")
     );
 
-  if (args[0] > 100)
+  if (args[0] > 200)
     return message.channel.send(
       new MessageEmbed()
         .setAuthor(
@@ -28,7 +28,7 @@ exports.run = async (client, message, args) => {
           "https://img.icons8.com/color/2x/high-volume--v2.gif"
         )
         .setColor("RED")
-        .setDescription("**Volume cannot exceed 100 :x: **")
+        .setDescription("**Volume cannot exceed 200 :x: **")
     );
 
   queue.connection.dispatcher.setVolumeLogarithmic(args[0] / 100);
@@ -37,7 +37,7 @@ exports.run = async (client, message, args) => {
     new MessageEmbed()
       .setAuthor(
         "Master Volume Controller",
-        "https://img.icons8.com/color/2x/high-volume--v2.gif"
+        "https://cdn.discordapp.com/attachments/930548494383591485/932339097685610567/volume-turn-up-the-volume.gif"
       )
       .setColor("BLUE")
       .setDescription("**Volume set to " + args[0] + " :white_check_mark: **")
